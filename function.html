@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Using a function with Javascript</title>
+
+		<script language="javascript">
+			function displayText()
+			{
+				document.getElemenById('targetDiv').innerHTML =
+					"You're using Javascript";
+			}
+		</script>
+	</head>
+
+	<body onmousedown="displayText()">
+
+		<h1>Using a Div</h1>
+		<div id ="targetDiv">
+		</div>
+	</body>
+
+</html>
