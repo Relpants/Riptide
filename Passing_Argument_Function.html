@@ -1,0 +1,28 @@
+<!--Elements like <div> are block elements in HTML (and XHTML), which means
+they’re automatically set off on their own lines (much like a header, such as
+<h1>). Sometimes, you might not want the data you fetch by using Ajax techniques
+to appear on its own line — you might want it to appear on the same
+line as other text, such as text that explains what your data means (for example,
+“Record number: “, or something similar). To place text inline in realtime,
+you can use a <span> element instead of a <div>-->
+
+
+
+<html>
+	<head>
+		<title>Using Arguments</title>
+
+		<script language="javascript">
+			function displayText(text){
+				document.getElementById("targetDiv").innerHTML = text;
+			}
+		</script>
+
+		<body onload="displayText('You\'re using Javascript.')">
+
+			<h1>Using a Div</h1>
+			<div id ="targetDiv">
+			</div>
+
+		</body>
+</html>
