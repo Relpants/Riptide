@@ -5,13 +5,13 @@
 		<script language="javascript">
 			function displayText()
 			{
-				document.getElemenById('targetDiv').innerHTML =
+				document.getElementById('targetDiv').innerHTML =
 					"You're using Javascript";
 			}
 		</script>
 	</head>
 
-	<body onmousedown="displayText()">
+	<body onload="displayText()">
 
 		<h1>Using a Div</h1>
 		<div id ="targetDiv">
