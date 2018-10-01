@@ -1,0 +1,26 @@
+<!--Use <div> for a new "block" of information, <span> will place the added
+	text on the same line-->
+
+
+<html>
+	<head>
+		<title>Using a span</title>
+
+		<script language="Javascript">
+			function displayText(){
+				document.getElementById('targetSpan').innerHTML =
+				"You're using Javascript";
+			}
+		</script>
+
+	</head>
+
+	<body onload="displayText()">
+
+		<h1>Using a span</h1>
+
+		The new text will appear here: "<span id ="targetSpan">
+		</span>".
+
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> Passing Multiple arguments to a funciton</title>
+
+		<script language="javascript">
+			var text = "You\'re using Javascript";
+			var op1 = 1;
+			var op2 = 2;
+			function displayText(){
+				sum = op1 + op2
+				document.getElementById('targetDiv').innerHTML = text + " " + sum;
+			}
+		</script>
+
+	</head>
+
+	<body onload="displayText()">
+		<h1> Passing multiple arguments to a function</h1>
+			<div id ="targetDiv">
+			</div>
+	</body>
+</html>
