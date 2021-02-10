@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Flask Parent Template</title>
+ </head>
+ <body>
+    <header>
+      <div class="container">
+            {% for object in data %}
+                var logo = object.getLogo()
+                <img src="https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png"><br>
+                <img src ="object.getLogo().text()">
+                {{object.getName()}}  {{ object.getScore()}}<br>
+            {% endfor %}
+      </div>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+    
+ </body>
+</html>
+
