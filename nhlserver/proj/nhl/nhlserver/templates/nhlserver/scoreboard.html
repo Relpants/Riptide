@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {text-align: center;}
+</style>
+</head>
+<body>
+
+
+{% if games_list %}
+    <ul>
+    {% for game in games_list %}
+        <p>{{ game.away_team.name }}</p>
+        <p>{{ game.away_team.score }}</p>
+    	<p>@</p>
+        <p>{{ game.home_team.score}}</p>
+        <p>{{ game.home_team.name}}</p>
+    {% endfor %}
+	</ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+</body>
+</html>
