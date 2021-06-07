@@ -19,19 +19,22 @@ def index(request):
 	while (i < len(num_of_games)):
 		game = r["events"][i]
 		game_stats = game["competitions"][0] 
-		home_team_info = game_stats["competitors"][0]
-		home = Team.objects.get_or_create(name = home_team_info["team"]["displayName"],
-							score = home_team_info["score"])
-		if(home[1] == False):
-			home = Team.objects.all().filter(name = home_team_info["team"]["displayName"]).filter(score = home_team_info["score"])
 
-		
+		game_date = Date.objects.get_or_create(gdate=date)
+		home_team_info = game_stats["competitors"][0]
+		home = Team.objects.get_or_create(name = home_team_info["team"]["displayName"])
 		away_team_info = game_stats["competitors"][1]
-		away = Team.objects.get_or_create(name = away_team_info["team"]["displayName"],
-							score = home_team_info["score"])
-		if(away[1] == False):
-			away = Team.objects.all().filter(name = away_team_info["team"]["displayName"]).filter(score = home_team_info["score"])
-		game_data = Game.objects.get_or_create(away_team = away[0],home_team = home[0])
+		away = Team.objects.get_or_create(name = away_team_info["team"]["displayName"])
+		
+		print(away[0])
+		print(home[0])
+		print(away_team_info["score"])
+		print(home_team_info["score"])
+		print(game_date[0])
+		game_data = Game.objects.get_or_create(away_team = away[0], home_team = home[0],
+											   away_team_score = away_team_info["score"],
+											   home_team_score = home_team_info["score"],
+											   game_date = game_date[0])
 		i = i + 1
 
 

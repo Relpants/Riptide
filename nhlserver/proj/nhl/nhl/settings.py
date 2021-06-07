@@ -76,8 +76,8 @@ SUBDIR = 'db'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'edward',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
